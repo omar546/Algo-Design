@@ -21,3 +21,8 @@ def JobScheduling(arr):
                 break
     print(len(job_id))
     print(sum(job_profit)) 
+    arr = [[1,4,20],
+           [2,1,10],
+           [3,1,40],
+           [4,1,30]]
+    JobScheduling(arr)
