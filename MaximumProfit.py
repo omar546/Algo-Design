@@ -12,6 +12,10 @@ def JobScheduling(arr):
         for j in range(n-1-i):
             if arr[j][2] < arr[j+1][2]:
                 arr[j],arr[j+1]=arr[j+1],arr[j]
+
+    job_id=[-1]*t
+    job_profit=[0]*t
+
     #Find a free slot for each job
     for i in range(n):
         for j in range(min(t-1,arr[i][1]-1),-1,-1):
@@ -20,9 +24,9 @@ def JobScheduling(arr):
                 job_profit[j] = arr[i][2]
                 break
     print(len(job_id))
-    print(sum(job_profit)) 
-    arr = [[1,4,20],
-           [2,1,10],
-           [3,1,40],
-           [4,1,30]]
-    JobScheduling(arr)
+    print(sum(job_profit))
+arr = [[1,4,20],
+        [2,1,10],
+        [3,1,40],
+        [4,1,30]]
+JobScheduling(arr)
